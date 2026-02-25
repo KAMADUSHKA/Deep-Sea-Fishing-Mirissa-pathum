@@ -1,4 +1,4 @@
-<?php
+﻿<?php
   /**
   * Requires the "PHP Email Form" library
   * The "PHP Email Form" library is available only in the pro version of the template
@@ -6,8 +6,8 @@
   * For more info and help: https://bootstrapmade.com/php-email-form/
   */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  // Replace your-email@example.com with your real receiving email address
+  $receiving_email_address = 'your-email@example.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -44,3 +44,4 @@
 
   echo $contact->send();
 ?>
+
