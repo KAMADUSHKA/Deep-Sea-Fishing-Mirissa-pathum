@@ -406,13 +406,16 @@ h6 {
     display: none;
     list-style: none;
     position: absolute;
-    inset: 60px 20px 20px 20px;
-    padding: 10px 0;
+    inset: 82px 16px auto 16px;
+    padding: 14px 0;
     margin: 0;
-    border-radius: 6px;
-    background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-    box-shadow: none;
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.14));
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 18px 42px rgba(4, 24, 45, 0.26);
+    backdrop-filter: blur(14px) saturate(140%);
+    -webkit-backdrop-filter: blur(14px) saturate(140%);
+    max-height: min(72vh, 420px);
     overflow-y: auto;
     transition: 0.3s;
     z-index: 9998;
@@ -420,16 +423,18 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-dropdown-color);
-    padding: 10px 20px;
+    color: #ecf8ff;
+    padding: 11px 22px;
     font-family: var(--nav-font);
-    font-size: 17px;
-    font-weight: 500;
+    font-size: clamp(17px, 4.2vw, 22px);
+    font-weight: 700;
+    line-height: 1.2;
     display: flex;
     align-items: center;
     justify-content: space-between;
     white-space: nowrap;
     transition: 0.3s;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
 
   .navmenu a i,
@@ -456,7 +461,10 @@ h6 {
   .navmenu a:hover,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-dropdown-hover-color);
+    color: #15d2ff;
+    background: rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    margin: 0 10px;
   }
 
   .navmenu .active i,
@@ -503,12 +511,21 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: rgba(7, 35, 61, 0.38);
+    backdrop-filter: blur(8px) saturate(120%);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
     transition: 0.3s;
   }
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+  }
+
+  /* Prevent backdrop-filter from clipping fixed mobile menu overlay */
+  .mobile-nav-active .header .header-container {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.2));
   }
 }
 
@@ -1062,9 +1079,11 @@ section,
   overflow: hidden;
   border: 1px solid rgba(170, 220, 255, 0.42);
   background: rgba(18, 94, 152, 0.28);
-  backdrop-filter: blur(14px) saturate(130%);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  backdrop-filter: blur(8px) saturate(130%);
+  -webkit-backdrop-filter: blur(8px) saturate(130%);
   box-shadow: 0 14px 28px rgba(6, 32, 60, 0.32);
+  transform: translateZ(0);
+  will-change: transform, backdrop-filter;
 }
 
 .hero .hero-content .booking-long-card .booking-long-item {
@@ -1186,8 +1205,8 @@ section,
   border-radius: 16px;
   border: 1px solid rgba(164, 220, 255, 0.38);
   background: rgba(20, 108, 173, 0.3);
-  backdrop-filter: blur(12px) saturate(125%);
-  -webkit-backdrop-filter: blur(12px) saturate(125%);
+  backdrop-filter: blur(8px) saturate(125%);
+  -webkit-backdrop-filter: blur(8px) saturate(125%);
   box-shadow: 0 10px 22px rgba(6, 35, 66, 0.26);
   padding: 1rem;
 }
@@ -1273,6 +1292,13 @@ section,
     text-align: center;
   }
 
+  .hero .hero-content .content-box .cta-group .hero-view-packages-btn {
+    width: auto;
+    align-self: flex-start;
+    padding: 0.72rem 1.35rem;
+    font-size: 0.95rem;
+  }
+
   .hero .hero-content .booking-long-card {
     width: 100%;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1300,6 +1326,11 @@ section,
 
   .hero .hero-content .content-box h1 {
     font-size: 1.8rem;
+  }
+
+  .hero .hero-content .content-box .cta-group .hero-view-packages-btn {
+    padding: 0.68rem 1.2rem;
+    font-size: 0.9rem;
   }
 
   .hero .hero-content .booking-long-card {
@@ -1396,29 +1427,46 @@ section,
 }
 
 .home-about .feature-item {
-  padding: 20px;
-  border-radius: 8px;
-  background-color: var(--surface-color);
+  padding: 2.5rem 1.5rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   height: 100%;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.08);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.4s ease, box-shadow 0.4s ease;
+  transform: translateZ(0);
+  text-align: center;
 }
 
 .home-about .feature-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.12);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .home-about .feature-item .icon {
-  font-size: 32px;
-  color: var(--accent-color);
-  margin-bottom: 15px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), black 15%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: var(--contrast-color);
+  font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid #fff;
 }
 
 .home-about .feature-item h4 {
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--heading-color);
 }
 
 .home-about .feature-item p {
@@ -1527,7 +1575,8 @@ section,
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 5px 15px color-mix(in srgb, var(--default-color), transparent 85%);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform: translateZ(0);
   height: 100%;
 }
 
@@ -2234,8 +2283,11 @@ section,
 
 @media (max-width: 768px) {
   .call-to-action .emergency-alert .emergency-content {
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 0.6rem;
     margin-bottom: 1.5rem;
   }
 }
@@ -2253,14 +2305,14 @@ section,
 
 @media (max-width: 768px) {
   .call-to-action .emergency-alert .emergency-icon {
-    margin-right: 0;
-    margin-bottom: 1rem;
+    display: none;
   }
 }
 
 .call-to-action .emergency-alert .emergency-icon i {
   font-size: 1.5rem;
   color: var(--contrast-color);
+  margin-right: 0 !important;
 }
 
 @media (max-width: 768px) {
@@ -2811,6 +2863,13 @@ section,
     max-width: 280px;
   }
 
+  .about .cta-buttons .btn-secondary {
+    width: auto;
+    max-width: none;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+
   .about .certifications-grid {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 1rem;
@@ -2835,7 +2894,8 @@ section,
   margin-bottom: 25px;
   box-shadow: 0 8px 25px color-mix(in srgb, var(--default-color), transparent 92%);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  transform: translateZ(0);
   height: fit-content;
 }
 
@@ -2910,10 +2970,11 @@ section,
   top: 12px;
   right: 12px;
   background: color-mix(in srgb, var(--contrast-color), transparent 10%);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   border-radius: 8px;
   padding: 8px 12px;
   text-align: center;
+  transform: translateZ(0);
 }
 
 .departments .department-image-wrapper .department-stats .stat-number {
@@ -2976,10 +3037,11 @@ section,
   border-radius: 20px;
   padding: 30px;
   height: 100%;
-  box-shadow: 0 12px 35px color-mix(in srgb, var(--accent-color), transparent 88%);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 90%);
   border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
   position: relative;
   overflow: hidden;
+  transform: translateZ(0);
 }
 
 .departments .featured-department::before {
@@ -3082,7 +3144,7 @@ section,
 
 .departments .featured-image .achievement-list .achievement-item {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
   padding: 8px 12px;
   border-radius: 20px;
   color: var(--contrast-color);
@@ -4579,12 +4641,13 @@ section,
   padding: 2.5rem 1.5rem;
   text-align: center;
   background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), background 0.4s ease, box-shadow 0.4s ease;
+  transform: translateZ(0);
   height: 100%;
 }
 
@@ -5397,10 +5460,19 @@ section,
   color: var(--contrast-color);
 }
 
-.contact .info-card .card-content p {
+.contact .info-card .card-content p,
+.contact .info-card .card-content a {
   font-size: 14px;
   margin-bottom: 0;
-  opacity: 0.8;
+  color: var(--contrast-color);
+  opacity: 0.9;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.contact .info-card .card-content a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .contact .social-links-panel {
