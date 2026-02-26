@@ -36,6 +36,24 @@
     mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
   }
 
+  const navMenuList = document.querySelector('#navmenu > ul');
+  if (navMenuList && !navMenuList.querySelector('.mobile-package-inquiry')) {
+    const inquiryItem = document.createElement('li');
+    inquiryItem.className = 'mobile-package-inquiry d-xl-none';
+
+    const inquiryLink = document.createElement('a');
+    inquiryLink.href = 'package-inquiry.html';
+    inquiryLink.className = 'mobile-inquiry-btn';
+    inquiryLink.textContent = 'Package Inquiry';
+
+    if (window.location.pathname.toLowerCase().includes('package-inquiry.html')) {
+      inquiryLink.classList.add('active');
+    }
+
+    inquiryItem.appendChild(inquiryLink);
+    navMenuList.appendChild(inquiryItem);
+  }
+
   /**
    * Hide mobile nav on same-page/hash links
    */

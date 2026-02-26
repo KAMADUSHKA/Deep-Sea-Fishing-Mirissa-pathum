@@ -467,6 +467,33 @@ h6 {
     margin: 0 10px;
   }
 
+  .navmenu .mobile-package-inquiry {
+    padding: 10px 14px 14px;
+  }
+
+  .navmenu .mobile-package-inquiry .mobile-inquiry-btn,
+  .navmenu .mobile-package-inquiry .mobile-inquiry-btn:focus {
+    justify-content: center;
+    padding: 12px 16px;
+    border-radius: 999px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%) !important;
+    border: 1px solid #25d366 !important;
+    margin: 0;
+    box-shadow: 0 10px 22px rgba(11, 84, 70, 0.32);
+    text-shadow: none;
+  }
+
+  .navmenu .mobile-package-inquiry .mobile-inquiry-btn:hover,
+  .navmenu .mobile-package-inquiry .mobile-inquiry-btn.active {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #22c55e 0%, #0f766e 100%) !important;
+    border-color: #22c55e !important;
+    margin: 0;
+  }
+
   .navmenu .active i,
   .navmenu .active:focus i {
     background-color: var(--accent-color);
