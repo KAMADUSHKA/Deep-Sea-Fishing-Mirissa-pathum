@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 
 /*--------------------------------------------------------------
@@ -7,29 +6,41 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Raleway",  sans-serif;
-  --nav-font: "Lato",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Lato", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #2c3031; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #fb9324; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #169fbf; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+:root {
+  --background-color: #ffffff;
+  /* Background color for the entire website, including individual sections */
+  --default-color: #2c3031;
+  /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #fb9324;
+  /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #169fbf;
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff;
+  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff;
+  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #496268;  /* The default color of the main navmenu links */
-  --nav-hover-color: #169fbf; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #496268; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #169fbf; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #496268;
+  /* The default color of the main navmenu links */
+  --nav-hover-color: #169fbf;
+  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff;
+  /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff;
+  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #496268;
+  /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #169fbf;
+  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -178,10 +189,16 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 24px;
+  font-size: 26px;
   margin: 0;
-  font-weight: 700;
-  color: color-mix(in srgb, var(--heading-color), #0a2c46 30%);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #013f6f, #169fbf, #013f6f);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 @media (max-width: 575px) {
@@ -619,18 +636,22 @@ h6 {
 
 .footer .footer-logo {
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width : 768px) {
-  .footer .footer-about a, .footer .footer-about .footer-contact p, .footer .footer-about .social-links{
+
+  .footer .footer-about a,
+  .footer .footer-about .footer-contact p,
+  .footer .footer-about .social-links {
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .footer .footer-links ul li, .footer .footer-links h4 {
+  .footer .footer-links ul li,
+  .footer .footer-links h4 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -994,10 +1015,12 @@ section,
 }
 
 @keyframes heroViewBtnFloat {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-4px);
   }
@@ -1008,9 +1031,11 @@ section,
     opacity: 0;
     transform: scale(0.92);
   }
+
   20% {
     opacity: 0.8;
   }
+
   100% {
     opacity: 0;
     transform: scale(1.1);
@@ -1018,6 +1043,7 @@ section,
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .hero .hero-content .content-box .cta-group .hero-view-packages-btn,
   .hero .hero-content .content-box .cta-group .hero-view-packages-btn::after {
     animation: none !important;
@@ -2742,9 +2768,9 @@ section,
   transition: filter 0.3s ease;
 }
 
-.about .certifications-section .certifications-grid .certification-item:hover img {
-  /* filter: grayscale(0) opacity(1); */
-}
+/* .about .certifications-section .certifications-grid .certification-item:hover img {
+  filter: grayscale(0) opacity(1);
+} */
 
 @media (max-width: 992px) {
   .about .content {
@@ -4411,6 +4437,11 @@ section,
 /*--------------------------------------------------------------
 # Appointmnet Section
 --------------------------------------------------------------*/
+.appointmnet {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 60px 0;
+}
+
 .appointmnet .appointment-info h3 {
   color: var(--heading-color);
   font-size: 2rem;
@@ -4545,60 +4576,89 @@ section,
 
 .appointmnet .process-steps .step-item {
   position: relative;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem;
   text-align: center;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  height: 100%;
+}
+
+.appointmnet .process-steps .step-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.6);
+  box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.15);
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 .appointmnet .process-steps .step-item .step-number {
   position: absolute;
-  top: -10px;
+  top: -20px;
   left: 50%;
   transform: translateX(-50%);
-  width: 40px;
-  height: 40px;
-  background-color: var(--accent-color);
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), black 15%));
   color: var(--contrast-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   z-index: 2;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 3px solid #fff;
 }
 
 .appointmnet .process-steps .step-item .step-icon {
-  margin: 1.5rem 0 1rem 0;
+  margin: 1rem 0 1.5rem 0;
+  transition: transform 0.3s ease;
+}
+
+.appointmnet .process-steps .step-item:hover .step-icon {
+  transform: scale(1.1);
 }
 
 .appointmnet .process-steps .step-item .step-icon i {
-  font-size: 3rem;
-  color: color-mix(in srgb, var(--accent-color), transparent 30%);
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), black 20%));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.8;
 }
 
 .appointmnet .process-steps .step-item h5 {
   color: var(--heading-color);
-  font-size: 1.2rem;
-  font-weight: 600;
-  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .appointmnet .process-steps .step-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  font-size: 0.9rem;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  font-size: 0.95rem;
   line-height: 1.6;
   margin-bottom: 0;
 }
 
+/* Connecting line adjusted for glassy cards */
 .appointmnet .process-steps .step-item::before {
   content: "";
   position: absolute;
-  top: 15px;
-  left: 50%;
-  width: calc(100% - 80px);
+  top: 50%;
+  right: -50px;
+  width: 100px;
   height: 2px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 70%);
-  z-index: 1;
+  background: linear-gradient(90deg, color-mix(in srgb, var(--accent-color), transparent 50%), transparent);
+  z-index: -1;
+  display: none;
+  /* Hide old line style as it might clash with cards */
 }
 
 @media (max-width: 991px) {
@@ -5407,7 +5467,6 @@ section,
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  text-fill-color: transparent;
 }
 
 .contact .form-container p {
@@ -6178,20 +6237,22 @@ input[type="reset"]:focus-visible {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  z-index: 1000; /* Ensure it's on top of other content */
-  text-decoration: none; /* Remove underline */
+  z-index: 1000;
+  /* Ensure it's on top of other content */
+  text-decoration: none;
+  /* Remove underline */
 }
 
 .whatsapp-button img {
-  width: 50px; /* Adjust this for size */
-  height: 50px; /* Ensures uniform scaling */
-  transition: transform 0.2s ease-in-out; /* Smooth scaling effect on hover */
+  width: 50px;
+  /* Adjust this for size */
+  height: 50px;
+  /* Ensures uniform scaling */
+  transition: transform 0.2s ease-in-out;
+  /* Smooth scaling effect on hover */
 }
 
 .whatsapp-button img:hover {
-  transform: scale(1.1); /* Slightly larger on hover */
+  transform: scale(1.1);
+  /* Slightly larger on hover */
 }
-
-
-
-
