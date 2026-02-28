@@ -3316,11 +3316,15 @@ section,
 @media (max-width: 768px) {
   .departments .department-card {
     padding: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+  }
+
+  .departments .col-lg-4>.department-card+.department-card {
+    margin-top: 16px;
   }
 
   .departments .featured-department {
-    padding: 25px;
+    padding: 22px;
   }
 
   .departments .featured-header .featured-icon {
@@ -3338,16 +3342,51 @@ section,
   }
 
   .departments .featured-image {
-    height: 180px;
+    height: 200px;
   }
 
   .departments .department-image-wrapper {
-    height: 120px;
+    height: 180px;
   }
 
   .departments .featured-services .service-tag {
     font-size: 10px;
     padding: 5px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .departments .department-card {
+    padding: 18px;
+  }
+
+  .departments .department-header h3 {
+    font-size: 18px;
+  }
+
+  .departments .department-header .department-subtitle {
+    font-size: 12px;
+  }
+
+  .departments .department-content p {
+    font-size: 14px;
+  }
+
+  .departments .department-content .department-highlights li {
+    font-size: 13px;
+  }
+
+  .departments .department-image-wrapper {
+    height: 170px;
+    margin-bottom: 16px;
+  }
+
+  .departments .featured-header h2 {
+    font-size: 21px;
+  }
+
+  .departments .featured-image {
+    height: 185px;
   }
 }
 
