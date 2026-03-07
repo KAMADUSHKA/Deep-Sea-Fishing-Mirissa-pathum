@@ -6574,32 +6574,63 @@ input[type="reset"]:focus-visible {
 
   @media (max-width: 992px) {
     .hero .hero-content .packages-ticker-wrapper {
-      flex-direction: column;
-      border-radius: 12px;
+      flex-direction: row;
+      /* Horizontal layout */
+      height: 54px;
+      /* Maintain compact height */
+      border-radius: 50px;
     }
 
     .hero .hero-content .packages-ticker-wrapper .packages-ticker-call {
-      width: 100%;
-      border-right: none;
-      border-bottom: 1px solid rgba(174, 226, 255, 0.2);
-      justify-content: center;
-      padding: 1rem;
+      width: auto;
+      border-right: 1px solid rgba(174, 226, 255, 0.2);
+      border-bottom: none;
+      padding: 0 15px;
+    }
+
+    .hero .hero-content .packages-ticker-wrapper .packages-ticker-call .item-icon {
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+    }
+
+    .hero .hero-content .packages-ticker-wrapper .packages-ticker-call .item-copy small {
+      display: none;
+      /* Hide 'Call for Bookings' text to save space */
+    }
+
+    .hero .hero-content .packages-ticker-wrapper .packages-ticker-call .item-copy strong {
+      font-size: 0.95rem;
     }
 
     .hero .hero-content .packages-ticker-swiper {
-      width: 100%;
-      height: 60px;
+      height: 100%;
     }
   }
 
   @media (max-width: 576px) {
+    .hero .hero-content .packages-ticker-wrapper {
+      height: 48px;
+    }
+
+    .hero .hero-content .packages-ticker-wrapper .packages-ticker-call {
+      padding: 0 10px;
+    }
+
     .hero .hero-content .packages-ticker-wrapper .packages-ticker-call .item-copy strong {
-      font-size: 1.1rem;
+      font-size: 0.85rem;
     }
 
     .hero .hero-content .package-ticker-item {
-      font-size: 0.85rem;
-      padding: 0 0.8rem;
+      font-size: 0.8rem;
+      padding: 0 0.6rem;
     }
+  }
+}
+
+/* Mobile Hero Image Adjustment */
+@media (max-width: 768px) {
+  .hero .hero-image img {
+    content: url("../img/deep-sea-fishing-mirissa/mobile_view_hero.jpg");
   }
 }
