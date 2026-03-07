@@ -94,8 +94,8 @@
                 </div>
               </div>
 
-              <div class="booking-long-card" data-aos="fade-up" data-aos-delay="350">
-                <a class="booking-long-item booking-long-call"
+              <div class="packages-ticker-wrapper" data-aos="fade-up" data-aos-delay="350">
+                <a class="packages-ticker-call"
                   href="https://wa.me/94720314473?text=Hello%20I%20would%20like%20to%20inquire%20about%20your%20services"
                   target="_blank" rel="noopener">
                   <span class="item-icon"><i class="bi bi-whatsapp"></i></span>
@@ -105,36 +105,90 @@
                   </span>
                 </a>
 
-                <div class="booking-long-item">
-                  <span class="item-icon"><i class="bi bi-clock-history"></i></span>
-                  <span class="item-copy">
-                    <small>Tour Slot 01</small>
-                    <strong>6:00 AM - 8:00 AM</strong>
-                  </span>
-                </div>
-
-                <div class="booking-long-item">
-                  <span class="item-icon"><i class="bi bi-clock-history"></i></span>
-                  <span class="item-copy">
-                    <small>Tour Slot 02</small>
-                    <strong>8:30 AM - 10:00 PM</strong>
-                  </span>
-                </div>
-
-                <div class="booking-long-item">
-                  <span class="item-icon"><i class="bi bi-clock-history"></i></span>
-                  <span class="item-copy">
-                    <small>Tour Slot 03</small>
-                    <strong>2:30 AM - 4:00 AM</strong>
-                  </span>
-                </div>
-
-                <div class="booking-long-item">
-                  <span class="item-icon"><i class="bi bi-clock-history"></i></span>
-                  <span class="item-copy">
-                    <small>Tour Slot 04</small>
-                    <strong>4:30 PM - 6:30 PM</strong>
-                  </span>
+                <div class="swiper init-swiper packages-ticker-swiper">
+                  <script type="application/json" class="swiper-config">
+                    {
+                      "loop": true,
+                      "speed": 1200,
+                      "autoplay": {
+                        "delay": 2000,
+                        "disableOnInteraction": false
+                      },
+                      "slidesPerView": "auto",
+                      "spaceBetween": 0,
+                      "breakpoints": {
+                        "320": {
+                          "slidesPerView": 1,
+                          "spaceBetween": 0
+                        },
+                        "768": {
+                          "slidesPerView": 2,
+                          "spaceBetween": 0
+                        },
+                        "1200": {
+                          "slidesPerView": 3,
+                          "spaceBetween": 0
+                        }
+                      }
+                    }
+                  </script>
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#package-snorkeling-turtle" class="package-ticker-item">
+                        <i class="bi bi-water"></i> <span>Snorkeling With Turtle</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-night-snorkeling" class="package-ticker-item">
+                        <i class="bi bi-moon-stars"></i> <span>Night Snorkeling</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-deep-sea-fishing" class="package-ticker-item">
+                        <i class="fas fa-ship"></i> <span>Deep Sea Fishing Tours</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-low-deep-sea-fishing" class="package-ticker-item">
+                        <i class="fas fa-anchor"></i> <span>Low Deep Sea Fishing</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-boat-tours" class="package-ticker-item">
+                        <i class="fas fa-ship"></i> <span>Boat Tours</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-snorkeling-whales" class="package-ticker-item">
+                        <i class="bi bi-eye"></i> <span>Snorkeling with Whales</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-deep-diving" class="package-ticker-item">
+                        <i class="bi bi-compass"></i> <span>Deep Diving</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-try-diving" class="package-ticker-item">
+                        <i class="bi bi-life-preserver"></i> <span>Try Diving</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-fun-diving" class="package-ticker-item">
+                        <i class="bi bi-stars"></i> <span>Fun Diving</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-night-diving" class="package-ticker-item">
+                        <i class="bi bi-moon"></i> <span>Night Diving</span>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#package-discover-diving" class="package-ticker-item">
+                        <i class="bi bi-globe2"></i> <span>Discover Diving</span>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -317,8 +371,8 @@
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
             <div class="department-card">
               <div class="department-image">
-                <img src="assets/img/deep-sea-fishing-mirissa/Blue Marlin.jpg" alt="Deep Sea Fishing Mirissa-Blue Marlin"
-                  class="img-fluid">
+                <img src="assets/img/deep-sea-fishing-mirissa/Blue Marlin.jpg"
+                  alt="Deep Sea Fishing Mirissa-Blue Marlin" class="img-fluid">
               </div>
               <div class="department-content">
                 <div class="department-icon">
@@ -456,7 +510,7 @@
 
           <!-- First Column with 2 Packages -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
-            <div class="department-card">
+            <div id="package-snorkeling-turtle" class="department-card">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="bi bi-water"></i>
@@ -474,7 +528,8 @@
                 </div>
               </div>
               <div class="department-content">
-                <p>Experience the magic of swimming alongside majestic sea turtles in the crystal-clear waters of Mirissa.</p>
+                <p>Experience the magic of swimming alongside majestic sea turtles in the crystal-clear waters of
+                  Mirissa.</p>
                 <ul class="department-highlights">
                   <li><i class="bi bi-check2"></i> Guided tour to the best turtle snorkeling spots.</li>
                   <li><i class="bi bi-check2"></i> High-quality snorkeling gear provided.</li>
@@ -484,7 +539,7 @@
               </div>
             </div>
 
-            <div class="department-card" data-aos="fade-up" data-aos-delay="100">
+            <div id="package-night-snorkeling" class="department-card" data-aos="fade-up" data-aos-delay="100">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="bi bi-moon-stars"></i>
@@ -502,7 +557,8 @@
                 </div>
               </div>
               <div class="department-content">
-                <p>Discover bioluminescent plankton, glowing corals, and nocturnal marine creatures in a unique night tour.</p>
+                <p>Discover bioluminescent plankton, glowing corals, and nocturnal marine creatures in a unique night
+                  tour.</p>
                 <ul class="department-highlights">
                   <li><i class="bi bi-check2"></i> Waterproof torches provided.</li>
                   <li><i class="bi bi-check2"></i> See octopuses, lobsters, and night-active fish.</li>
@@ -514,7 +570,7 @@
 
           <!-- Second Column - Featured -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="50">
-            <div class="featured-department">
+            <div id="package-deep-sea-fishing" class="featured-department">
               <div class="featured-header">
                 <div class="featured-badge">
                   <i class="bi bi-star-fill"></i>
@@ -574,7 +630,7 @@
 
           <!-- Third Column with 2 Packages -->
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="department-card">
+            <div id="package-low-deep-sea-fishing" class="department-card">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="fas fa-anchor"></i>
@@ -602,7 +658,7 @@
               </div>
             </div>
 
-            <div class="department-card" data-aos="fade-up" data-aos-delay="150">
+            <div id="package-boat-tours" class="department-card" data-aos="fade-up" data-aos-delay="150">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="fas fa-ship"></i>
@@ -611,8 +667,8 @@
                 <p class="department-subtitle">Scenic coastline and ocean views</p>
               </div>
               <div class="department-image-wrapper">
-                <img src="assets/img/deep-sea-fishing-mirissa/Boat Tours.jpg"
-                  alt="Deep Sea Fishing Mirissa-Boat tours" class="img-fluid" loading="lazy">
+                <img src="assets/img/deep-sea-fishing-mirissa/Boat Tours.jpg" alt="Deep Sea Fishing Mirissa-Boat tours"
+                  class="img-fluid" loading="lazy">
                 <div class="department-stats">
                   <div class="stat-item">
                     <span class="stat-number">$40</span>
@@ -620,7 +676,8 @@
                 </div>
               </div>
               <div class="department-content">
-                <p>Discover hidden beaches and breathtaking ocean views with relaxing or adventure-filled boat tours.</p>
+                <p>Discover hidden beaches and breathtaking ocean views with relaxing or adventure-filled boat tours.
+                </p>
                 <ul class="department-highlights">
                   <li><i class="bi bi-check2"></i> One Person - $40</li>
                   <li><i class="bi bi-check2"></i> Two Person (Couple) - $75</li>
@@ -632,7 +689,7 @@
 
           <!-- Extra Cards -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-            <div class="department-card">
+            <div id="package-snorkeling-whales" class="department-card">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="bi bi-eye"></i>
@@ -650,7 +707,8 @@
                 </div>
               </div>
               <div class="department-content">
-                <p>Spend time with magnificent blue giants and enjoy an unforgettable snorkeling experience in the Indian Ocean.</p>
+                <p>Spend time with magnificent blue giants and enjoy an unforgettable snorkeling experience in the
+                  Indian Ocean.</p>
                 <ul class="department-highlights">
                   <li><i class="bi bi-check2"></i> Guided by experienced professionals.</li>
                   <li><i class="bi bi-check2"></i> High-quality snorkeling gear provided.</li>
@@ -661,7 +719,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
-            <div class="department-card">
+            <div id="package-deep-diving" class="department-card">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="bi bi-compass"></i>
@@ -679,7 +737,8 @@
                 </div>
               </div>
               <div class="department-content">
-                <p>Perfect for certified divers who want to visit stunning underwater landscapes and vibrant coral reefs.</p>
+                <p>Perfect for certified divers who want to visit stunning underwater landscapes and vibrant coral
+                  reefs.</p>
                 <ul class="department-highlights">
                   <li><i class="bi bi-check2"></i> Professional dive instructors and safety equipment.</li>
                   <li><i class="bi bi-check2"></i> High-quality diving gear provided.</li>
@@ -689,7 +748,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="department-card">
+            <div id="package-try-diving" class="department-card">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="bi bi-life-preserver"></i>
@@ -718,7 +777,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="0">
-            <div class="department-card">
+            <div id="package-fun-diving" class="department-card">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="bi bi-stars"></i>
@@ -736,7 +795,8 @@
                 </div>
               </div>
               <div class="department-content">
-                <p>Explore colorful reefs and marine life including tropical fish, turtles, and reef sharks with expert guides.</p>
+                <p>Explore colorful reefs and marine life including tropical fish, turtles, and reef sharks with expert
+                  guides.</p>
                 <ul class="department-highlights">
                   <li><i class="bi bi-check2"></i> Multiple dive sites to explore.</li>
                   <li><i class="bi bi-check2"></i> Small group and private dives available.</li>
@@ -747,7 +807,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="50">
-            <div class="department-card">
+            <div id="package-night-diving" class="department-card">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="bi bi-moon"></i>
@@ -776,7 +836,7 @@
           </div>
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="department-card">
+            <div id="package-discover-diving" class="department-card">
               <div class="department-header">
                 <div class="department-icon">
                   <i class="bi bi-globe2"></i>
@@ -794,7 +854,8 @@
                 </div>
               </div>
               <div class="department-content">
-                <p>No prior diving experience required. Enjoy a safe and guided introduction to the underwater world.</p>
+                <p>No prior diving experience required. Enjoy a safe and guided introduction to the underwater world.
+                </p>
                 <ul class="department-highlights">
                   <li><i class="bi bi-check2"></i> Professional dive instructors and safety equipment.</li>
                   <li><i class="bi bi-check2"></i> High-quality diving gear provided.</li>
