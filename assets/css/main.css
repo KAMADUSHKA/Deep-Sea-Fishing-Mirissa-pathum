@@ -920,6 +920,87 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# About Video Hero Section
+--------------------------------------------------------------*/
+.about-video-hero {
+  position: relative;
+  height: 75vh;
+  min-height: 420px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-video-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.about-video-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px) brightness(0.7);
+  transform: scale(1.05);
+  /* prevent blur edges showing */
+}
+
+.about-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(2, 10, 30, 0.55) 0%, rgba(2, 20, 50, 0.75) 100%);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  padding: 0 20px;
+  max-width: 780px;
+}
+
+.about-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.about-hero-content p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .about-video-hero {
+    height: 60vh;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
 section,
@@ -2413,7 +2494,7 @@ section,
   color: #ffffff !important;
 }
 
-.call-to-action .btn-whatsapp-cta {
+.btn-whatsapp-cta {
   background: linear-gradient(135deg, #25D366, #1EBE5D) !important;
   color: #ffffff !important;
   border: none !important;
@@ -2429,7 +2510,7 @@ section,
   box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3) !important;
 }
 
-.call-to-action .btn-whatsapp-cta:hover {
+.btn-whatsapp-cta:hover {
   background: linear-gradient(135deg, #1EBE5D, #18A04D) !important;
   transform: translateY(-2px);
   box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4) !important;
