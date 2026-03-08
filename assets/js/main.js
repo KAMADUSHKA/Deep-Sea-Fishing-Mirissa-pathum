@@ -195,4 +195,24 @@
     });
   });
 
+  /**
+   * Handle image loading for packages section
+   */
+  function handlePackageImages() {
+    const packageImages = document.querySelectorAll('.department-image-wrapper img, .featured-image img');
+
+    packageImages.forEach(img => {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', function () {
+          img.classList.add('loaded');
+        });
+      }
+    });
+  }
+
+  window.addEventListener('load', handlePackageImages);
+  document.addEventListener('DOMContentLoaded', handlePackageImages);
+
 })();

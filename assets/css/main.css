@@ -569,7 +569,7 @@ h6 {
   background: linear-gradient(180deg, #031525 0%, #010810 100%) !important;
   font-size: 14px;
   position: relative;
-  padding: 80px 0 0;
+  padding: 40px 0 0;
   overflow: hidden;
 }
 
@@ -587,7 +587,7 @@ h6 {
 }
 
 .footer .footer-top {
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   border-top: none;
 }
 
@@ -636,8 +636,8 @@ h6 {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   position: relative;
-  padding-bottom: 15px;
-  margin-bottom: 25px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .footer h4::after {
@@ -699,7 +699,7 @@ h6 {
 }
 
 .footer .copyright {
-  padding: 30px 0;
+  padding: 20px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   background: rgba(0, 0, 0, 0.2);
   margin-top: 0;
@@ -733,7 +733,7 @@ h6 {
 
 @media (max-width : 768px) {
   .footer {
-    padding-top: 60px;
+    padding-top: 30px;
     text-align: center;
   }
 
@@ -2983,7 +2983,10 @@ section,
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   transform: translateZ(0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
   height: fit-content;
+  contain: layout paint;
 }
 
 .departments .department-card:hover {
@@ -3043,13 +3046,33 @@ section,
   overflow: hidden;
   margin-bottom: 20px;
   height: 240px;
+  background: linear-gradient(110deg, #f0f2f5 8%, #e1e4e8 18%, #f0f2f5 33%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s linear infinite;
+  transform: translateZ(0);
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+
+  100% {
+    background-position: -200% 0;
+  }
 }
 
 .departments .department-image-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.3s ease;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}
+
+.departments .department-image-wrapper img.loaded {
+  opacity: 1;
 }
 
 .departments .department-image-wrapper .department-stats {
@@ -3057,11 +3080,16 @@ section,
   top: 12px;
   right: 12px;
   background: color-mix(in srgb, var(--contrast-color), transparent 10%);
-  backdrop-filter: blur(5px);
   border-radius: 8px;
   padding: 8px 12px;
   text-align: center;
   transform: translateZ(0);
+}
+
+@media (min-width: 992px) {
+  .departments .department-image-wrapper .department-stats {
+    backdrop-filter: blur(5px);
+  }
 }
 
 .departments .department-image-wrapper .department-stats .stat-number {
@@ -3129,6 +3157,9 @@ section,
   position: relative;
   overflow: hidden;
   transform: translateZ(0);
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  contain: layout paint;
 }
 
 .departments .featured-department::before {
@@ -3206,12 +3237,23 @@ section,
   overflow: hidden;
   margin-bottom: 25px;
   height: 200px;
+  background: linear-gradient(110deg, #f0f2f5 8%, #e1e4e8 18%, #f0f2f5 33%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s linear infinite;
+  transform: translateZ(0);
 }
 
 .departments .featured-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.8s ease, transform 0.5s ease;
+  will-change: opacity, transform;
+}
+
+.departments .featured-image img.loaded {
+  opacity: 1;
 }
 
 .departments .featured-image .featured-overlay {
@@ -3231,7 +3273,6 @@ section,
 
 .departments .featured-image .achievement-list .achievement-item {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  backdrop-filter: blur(5px);
   padding: 8px 12px;
   border-radius: 20px;
   color: var(--contrast-color);
@@ -3241,6 +3282,12 @@ section,
   align-items: center;
   gap: 6px;
   width: fit-content;
+}
+
+@media (min-width: 992px) {
+  .departments .featured-image .achievement-list .achievement-item {
+    backdrop-filter: blur(5px);
+  }
 }
 
 .departments .featured-image .achievement-list .achievement-item i {
@@ -6629,6 +6676,19 @@ input[type="reset"]:focus-visible {
 }
 
 /* Mobile Hero Image Adjustment */
+/* Mobile Reordering for Packages */
+@media (max-width: 991px) {
+  #packages .row.gy-4 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Moves the 2nd column (Featured) to the top on mobile */
+  #packages .row.gy-4>div:nth-child(2) {
+    order: -1 !important;
+  }
+}
+
 @media (max-width: 768px) {
   .hero .hero-image img {
     content: url("../img/deep-sea-fishing-mirissa/mobile_view_hero.jpg");
