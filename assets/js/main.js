@@ -83,9 +83,16 @@
    */
   const preloader = document.querySelector('#preloader');
   if (preloader) {
-    window.addEventListener('load', () => {
+    // Hide preloader much earlier so users don't wait for heavy images/iframes
+    document.addEventListener('DOMContentLoaded', () => {
       preloader.remove();
     });
+    // Fallback just in case DOMContentLoaded already fired
+    setTimeout(() => {
+      if (document.querySelector('#preloader')) {
+        document.querySelector('#preloader').remove();
+      }
+    }, 500);
   }
 
   /**
