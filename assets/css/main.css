@@ -6665,6 +6665,26 @@ input[type="reset"]:focus-visible {
   color: #ffffff !important;
 }
 
+/* WhatsApp CTA Button — override global orange rule */
+a.btn-whatsapp-cta,
+a.btn-whatsapp-cta:link,
+a.btn-whatsapp-cta:visited {
+  background: linear-gradient(135deg, #25D366, #1EBE5D) !important;
+  border-color: #25D366 !important;
+  color: #ffffff !important;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.35) !important;
+}
+
+a.btn-whatsapp-cta:hover,
+a.btn-whatsapp-cta:focus {
+  background: linear-gradient(135deg, #1EBE5D, #18A04D) !important;
+  border-color: #1EBE5D !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 25px rgba(37, 211, 102, 0.45) !important;
+  transform: translateY(-2px);
+}
+
+
 /* WhatsApp Button Styling */
 .whatsapp-button {
   position: fixed;
