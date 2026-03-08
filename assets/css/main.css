@@ -13,34 +13,30 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
-  --background-color: #ffffff;
-  /* Background color for the entire website, including individual sections */
-  --default-color: #2c3031;
-  /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #fb9324;
-  /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #169fbf;
-  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --background-color: #F1FAFF;
+  /* Background color for the entire website (Light Sea Mist) */
+  --default-color: #03045E;
+  /* Default text color (Dark Navy) */
+  --heading-color: #023E8A;
+  /* Heading color (Deep Ocean Blue) */
+  --accent-color: #F77F00;
+  /* Highlights & Core Accent (Sea Aqua) */
   --surface-color: #ffffff;
-  /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  /* Separated elements background */
   --contrast-color: #ffffff;
-  /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  /* Text on dark backgrounds */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #496268;
-  /* The default color of the main navmenu links */
-  --nav-hover-color: #169fbf;
-  /* Applied to main navmenu links when they are hovered over or active */
+  --nav-color: #03045E;
+  /* Navigation default (Dark Navy) */
+  --nav-hover-color: #00B4D8;
+  /* Navigation hover (Sea Aqua) */
   --nav-mobile-background-color: #ffffff;
-  /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff;
-  /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #496268;
-  /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #169fbf;
-  /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-dropdown-color: #03045E;
+  --nav-dropdown-hover-color: #00B4D8;
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -193,7 +189,7 @@ h6 {
   margin: 0;
   font-weight: 800;
   letter-spacing: 0.5px;
-  background: linear-gradient(90deg, #013f6f, #169fbf, #013f6f);
+  background: linear-gradient(90deg, #023E8A, #00B4D8, #023E8A);
   background-size: 200% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -560,10 +556,10 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  --footer-bg: #031525;
-  --footer-accent: #169fbf;
-  --footer-accent-2: #fb9324;
-  --footer-text: #ecf0f1;
+  --footer-bg: #03045E;
+  --footer-accent: #00B4D8;
+  --footer-accent-2: #F77F00;
+  --footer-text: #F1FAFF;
 
   color: var(--footer-text);
   background: linear-gradient(180deg, #031525 0%, #010810 100%) !important;
@@ -2355,114 +2351,100 @@ section,
   transform: translateX(5px);
 }
 
-.call-to-action .emergency-alert {
-  background: linear-gradient(135deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color), black 20%) 100%);
-  padding: 2rem;
-  border-radius: 15px;
+.call-to-action .cta-banner {
+  background: linear-gradient(135deg, #03045E, #023E8A);
+  padding: 3rem 4rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 40px rgba(2, 62, 138, 0.2);
   margin-top: 3rem;
   color: var(--contrast-color);
-}
-
-.call-to-action .emergency-alert .emergency-content {
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 768px) {
-  .call-to-action .emergency-alert .emergency-content {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0.6rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.call-to-action .emergency-alert .emergency-icon {
-  width: 60px;
-  height: 60px;
-  background: color-mix(in srgb, var(--contrast-color), transparent 85%);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .call-to-action .emergency-alert .emergency-icon {
-    display: none;
-  }
-}
-
-.call-to-action .emergency-alert .emergency-icon i {
-  font-size: 1.5rem;
-  color: var(--contrast-color);
-  margin-right: 0 !important;
-}
-
-@media (max-width: 768px) {
-  .call-to-action .emergency-alert .emergency-text {
-    text-align: center;
-  }
-}
-
-.call-to-action .emergency-alert .emergency-text h4 {
-  color: var(--contrast-color);
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-}
-
-.call-to-action .emergency-alert .emergency-text p {
-  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
-  margin-bottom: 0;
-}
-
-.call-to-action .emergency-alert .emergency-btn {
-  background: var(--contrast-color);
-  color: var(--accent-color);
-  padding: 15px 25px;
-  border-radius: 50px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-@media (max-width: 768px) {
-  .call-to-action .emergency-alert .emergency-btn {
-    display: block;
-    text-align: center;
-    width: 100%;
-  }
-}
-
-.call-to-action .emergency-alert .emergency-btn i {
-  margin-right: 10px;
-  font-size: 1.2rem;
-}
-
-.call-to-action .emergency-alert .emergency-btn:hover {
-  background: color-mix(in srgb, var(--contrast-color), transparent 10%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
 }
 
 @media (max-width: 992px) {
-  .call-to-action .emergency-alert {
+  .call-to-action .cta-banner {
+    padding: 2.5rem 2rem;
     text-align: center;
   }
+}
 
-  .call-to-action .emergency-alert .row {
+.call-to-action .cta-text h3 {
+  color: #ffffff;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .call-to-action .cta-text h3 {
+    font-size: 1.8rem;
+  }
+}
+
+.call-to-action .cta-text p {
+  color: #A0B2C6;
+  font-size: 1rem;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.call-to-action .btn-book-now-cta {
+  background: linear-gradient(135deg, #FF6B00, #F77F00) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(247, 127, 0, 0.3) !important;
+}
+
+.call-to-action .btn-book-now-cta:hover {
+  background: linear-gradient(135deg, #E65A00, #D66D00) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(247, 127, 0, 0.4) !important;
+  color: #ffffff !important;
+}
+
+.call-to-action .btn-whatsapp-cta {
+  background: linear-gradient(135deg, #25D366, #1EBE5D) !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 12px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3) !important;
+}
+
+.call-to-action .btn-whatsapp-cta:hover {
+  background: linear-gradient(135deg, #1EBE5D, #18A04D) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37, 211, 102, 0.4) !important;
+  color: #ffffff !important;
+}
+
+@media (max-width: 576px) {
+  .call-to-action .cta-buttons-wrapper {
     flex-direction: column;
   }
 
-  .call-to-action .emergency-alert .col-lg-4 {
-    margin-top: 1rem;
+  .call-to-action .btn-book-now-cta,
+  .call-to-action .btn-whatsapp-cta {
+    width: 100%;
+    justify-content: center;
   }
 }
 
@@ -2982,11 +2964,7 @@ section,
   box-shadow: 0 8px 25px color-mix(in srgb, var(--default-color), transparent 92%);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  transform: translateZ(0);
-  will-change: transform, opacity;
-  backface-visibility: hidden;
   height: fit-content;
-  contain: layout paint;
 }
 
 .departments .department-card:hover {
@@ -3046,10 +3024,7 @@ section,
   overflow: hidden;
   margin-bottom: 20px;
   height: 240px;
-  background: linear-gradient(110deg, #f0f2f5 8%, #e1e4e8 18%, #f0f2f5 33%);
-  background-size: 200% 100%;
-  animation: skeleton-shimmer 1.5s linear infinite;
-  transform: translateZ(0);
+  background: color-mix(in srgb, var(--accent-color), transparent 95%);
 }
 
 @keyframes skeleton-shimmer {
@@ -3066,13 +3041,7 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.5s ease;
-  will-change: opacity, transform;
-}
-
-.departments .department-image-wrapper img.loaded {
-  opacity: 1;
+  transition: transform 0.5s ease;
 }
 
 .departments .department-image-wrapper .department-stats {
@@ -3148,18 +3117,33 @@ section,
 }
 
 .departments .featured-department {
-  background: linear-gradient(145deg, var(--surface-color), color-mix(in srgb, var(--accent-color), transparent 95%));
+  background: rgba(255, 255, 255, 0.4);
   border-radius: 20px;
   padding: 30px;
   height: 100%;
-  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 90%);
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--accent-color), transparent 85%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
   position: relative;
   overflow: hidden;
-  transform: translateZ(0);
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  contain: layout paint;
+}
+
+@media (min-width: 992px) {
+  .departments .featured-department {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+}
+
+.departments .featured-department::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%), transparent);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .departments .featured-department::before {
@@ -3237,23 +3221,14 @@ section,
   overflow: hidden;
   margin-bottom: 25px;
   height: 200px;
-  background: linear-gradient(110deg, #f0f2f5 8%, #e1e4e8 18%, #f0f2f5 33%);
-  background-size: 200% 100%;
-  animation: skeleton-shimmer 1.5s linear infinite;
-  transform: translateZ(0);
+  background: color-mix(in srgb, var(--accent-color), transparent 95%);
 }
 
 .departments .featured-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.8s ease, transform 0.5s ease;
-  will-change: opacity, transform;
-}
-
-.departments .featured-image img.loaded {
-  opacity: 1;
+  transition: transform 0.5s ease;
 }
 
 .departments .featured-image .featured-overlay {
@@ -5416,7 +5391,7 @@ section,
 
 .faq .faq-contact-card {
   height: 100%;
-  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
+  background: linear-gradient(135deg, #03045E, #023E8A);
   border-radius: 10px;
   padding: 40px 30px;
   display: flex;
@@ -5554,7 +5529,7 @@ section,
 }
 
 .contact .contact-info-panel {
-  background: linear-gradient(145deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #1a4372 40%));
+  background: linear-gradient(135deg, #03045E, #023E8A);
   color: var(--contrast-color);
   border-radius: 20px;
   padding: 40px 30px;
@@ -6418,9 +6393,9 @@ section,
 # Global Blue Buttons
 --------------------------------------------------------------*/
 :root {
-  --blue-btn-bg: #169fbf;
-  --blue-btn-bg-hover: #117e97;
-  --blue-btn-border: #169fbf;
+  --blue-btn-bg: #F77F00;
+  --blue-btn-bg-hover: #D66D00;
+  --blue-btn-border: #F77F00;
   --blue-btn-text: #ffffff;
 }
 
@@ -6456,7 +6431,7 @@ input[type="submit"]:focus-visible,
 input[type="button"]:focus-visible,
 input[type="reset"]:focus-visible {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(22, 159, 191, 0.32);
+  box-shadow: 0 0 0 3px rgba(0, 105, 148, 0.32);
 }
 
 .header .btn-getstarted,

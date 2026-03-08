@@ -32,6 +32,11 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css?v=20260226-hero-view-btn-motion-3" rel="stylesheet">
 
+  <!-- Preload Critical Heavy Images (Reduce Load Lag) -->
+  <link rel="preload" as="image" href="assets/img/deep-sea-fishing-mirissa/Snorkeling with Whales.jpg">
+  <link rel="preload" as="image" href="assets/img/deep-sea-fishing-mirissa/Deep Sea Fishing Tours_1.jpg">
+  <link rel="preload" as="image" href="assets/img/deep-sea-fishing-mirissa/Night Diving.jpg">
+
 </head>
 
 <body class="index-page">
@@ -699,8 +704,7 @@
               </div>
               <div class="department-image-wrapper">
                 <img src="assets/img/deep-sea-fishing-mirissa/Snorkeling with Whales.jpg"
-                  alt="Deep Sea Fishing Mirissa-Snorkeling with whales" class="img-fluid" loading="lazy"
-                  decoding="async" fetchpriority="low">
+                  alt="Deep Sea Fishing Mirissa-Snorkeling with whales" class="img-fluid">
                 <div class="department-stats">
                   <div class="stat-item">
                     <span class="stat-number">$250</span>
@@ -730,8 +734,7 @@
               </div>
               <div class="department-image-wrapper">
                 <img src="assets/img/deep-sea-fishing-mirissa/Deep Diving.jpg"
-                  alt="Deep Sea Fishing Mirissa-Deep diving" class="img-fluid" loading="lazy" decoding="async"
-                  fetchpriority="low">
+                  alt="Deep Sea Fishing Mirissa-Deep diving" class="img-fluid">
                 <div class="department-stats">
                   <div class="stat-item">
                     <span class="stat-number">$45</span>
@@ -760,8 +763,7 @@
               </div>
               <div class="department-image-wrapper">
                 <img src="assets/img/deep-sea-fishing-mirissa/Try Diving.jpg"
-                  alt="Deep Sea Fishing Mirissa-Try diving package" class="img-fluid" loading="lazy" decoding="async"
-                  fetchpriority="low">
+                  alt="Deep Sea Fishing Mirissa-Try diving package" class="img-fluid">
                 <div class="department-stats">
                   <div class="stat-item">
                     <span class="stat-number">$35</span>
@@ -790,8 +792,7 @@
               </div>
               <div class="department-image-wrapper">
                 <img src="assets/img/deep-sea-fishing-mirissa/Fun Diving.jpg"
-                  alt="Deep Sea Fishing Mirissa-Fun diving package" class="img-fluid" loading="lazy" decoding="async"
-                  fetchpriority="low">
+                  alt="Deep Sea Fishing Mirissa-Fun diving package" class="img-fluid">
                 <div class="department-stats">
                   <div class="stat-item">
                     <span class="stat-number">$45</span>
@@ -821,8 +822,7 @@
               </div>
               <div class="department-image-wrapper">
                 <img src="assets/img/deep-sea-fishing-mirissa/Night Diving.jpg"
-                  alt="Deep Sea Fishing Mirissa-Night diving package" class="img-fluid" loading="lazy" decoding="async"
-                  fetchpriority="low">
+                  alt="Deep Sea Fishing Mirissa-Night diving package" class="img-fluid">
                 <div class="department-stats">
                   <div class="stat-item">
                     <span class="stat-number">$50</span>
@@ -851,8 +851,7 @@
               </div>
               <div class="department-image-wrapper">
                 <img src="assets/img/deep-sea-fishing-mirissa/Discover Diving.jpg"
-                  alt="Deep Sea Fishing Mirissa-Discover diving package" class="img-fluid" loading="lazy"
-                  decoding="async" fetchpriority="low">
+                  alt="Deep Sea Fishing Mirissa-Discover diving package" class="img-fluid">
                 <div class="department-stats">
                   <div class="stat-item">
                     <span class="stat-number">$65</span>
@@ -1117,24 +1116,24 @@
     <!-- Call To Action Section -->
     <section id="call-to-action" class="call-to-action section">
       <div class="container" data-aos="fade-up" data-aos-delay="50">
-        <div class="emergency-alert" data-aos="zoom-in" data-aos-delay="250">
-          <div class="row align-items-center">
-            <div class="col-lg-8">
-              <div class="emergency-content">
-                <div class="emergency-icon">
-                  <i class="bi bi-whatsapp me-2"></i>
-                </div>
-                <div class="emergency-text">
-                  <h4>Need Assistance or Custom Tour?</h4>
-                  <p>Contact us anytime to plan your personalized deep sea fishing or sunset paddle experience.</p>
-                </div>
+        <div class="cta-banner" data-aos="zoom-in" data-aos-delay="250">
+          <div class="row align-items-center gy-4">
+            <div class="col-lg-7">
+              <div class="cta-text">
+                <h3>Ready for Your<br>Ocean Adventure?</h3>
+                <p>Contact us anytime to plan a personalized fishing or diving experience.</p>
               </div>
             </div>
-            <div class="col-lg-4 text-end">
-              <a href="https://wa.me/94720314473?text=Hello%20I%20would%20like%20to%20inquire%20about%20your%20services"
-                class="emergency-btn">
-                <i class="bi bi-whatsapp me-2"></i> Call +94 72 031 4473
-              </a>
+            <div class="col-lg-5 text-lg-end text-center">
+              <div class="cta-buttons-wrapper d-flex justify-content-lg-end justify-content-center gap-3">
+                <a href="#packages" class="btn-book-now-cta">
+                  Book Now <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="https://wa.me/94720314473?text=Hello%20I%20would%20like%20to%20inquire%20about%20your%20services"
+                  class="btn-whatsapp-cta" target="_blank">
+                  <i class="bi bi-whatsapp"></i> WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </div>
