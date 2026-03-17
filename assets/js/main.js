@@ -1,4 +1,4 @@
-﻿/**
+/**
 * Template Name: Deep Sea Fishing Mirissa
 * Template URL: https://bootstrapmade.com/Deep Sea Fishing Mirissa-bootstrap-hospital-website-template/
 * Updated: Jul 04 2025 with Bootstrap v5.3.7
@@ -42,13 +42,11 @@
     inquiryItem.className = 'mobile-package-inquiry d-xl-none';
 
     const inquiryLink = document.createElement('a');
-    inquiryLink.href = 'package-inquiry.html';
+    inquiryLink.href = 'https://wa.me/94720314473?text=Hello%20I%20would%20like%20to%20inquire%20about%20your%20services';
+    inquiryLink.target = '_blank';
+    inquiryLink.rel = 'noopener';
     inquiryLink.className = 'mobile-inquiry-btn';
-    inquiryLink.textContent = 'Package Inquiry';
-
-    if (window.location.pathname.toLowerCase().includes('package-inquiry.html')) {
-      inquiryLink.classList.add('active');
-    }
+    inquiryLink.innerHTML = '<i class="bi bi-whatsapp me-2"></i> WhatsApp Inquiry';
 
     inquiryItem.appendChild(inquiryLink);
     navMenuList.appendChild(inquiryItem);
@@ -200,6 +198,28 @@
     faqItem.addEventListener('click', () => {
       faqItem.parentNode.classList.toggle('faq-active');
     });
+  });
+
+  /**
+   * WhatsApp Button Auto-popup
+   */
+  window.addEventListener('load', () => {
+    const whatsappBtn = document.querySelector('.whatsapp-button');
+    const whatsappText = document.querySelector('.whatsapp-text');
+    
+    if (whatsappBtn && whatsappText) {
+      setTimeout(() => {
+        whatsappText.style.opacity = '1';
+        whatsappText.style.transform = 'translateX(0)';
+        whatsappText.style.marginRight = '-5px';
+        
+        setTimeout(() => {
+          whatsappText.style.opacity = '';
+          whatsappText.style.transform = '';
+          whatsappText.style.marginRight = '';
+        }, 4000);
+      }, 3000);
+    }
   });
 
 })();
