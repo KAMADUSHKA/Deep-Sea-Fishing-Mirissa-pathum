@@ -736,9 +736,13 @@ h6 {
   .footer .footer-about a,
   .footer .footer-about .footer-contact p,
   .footer .footer-about .social-links {
+    display: block;
+    text-align: center;
+  }
+
+  .footer .footer-about .social-links {
     display: flex;
     justify-content: center;
-    align-items: center;
   }
 
   .footer .footer-links ul li,
@@ -755,6 +759,11 @@ h6 {
 
   .footer .footer-links ul a:hover {
     transform: translateY(-3px);
+  }
+
+  /* Fix overlapping columns on mobile */
+  .footer .row.gy-4 > div {
+    margin-bottom: 20px;
   }
 }
 
@@ -824,7 +833,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
-  bottom: 15px;
+  bottom: 85px; /* Moved up to avoid overlapping with WhatsApp or footer elements */
 }
 
 /*--------------------------------------------------------------
@@ -4881,27 +4890,27 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Appointmnet Section
+# appointment Section
 --------------------------------------------------------------*/
-.appointmnet {
+.appointment {
   background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
   padding: 60px 0;
 }
 
-.appointmnet .appointment-info h3 {
+.appointment .appointment-info h3 {
   color: var(--heading-color);
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.appointmnet .appointment-info p {
+.appointment .appointment-info p {
   color: var(--default-color);
   font-size: 1rem;
   line-height: 1.6;
 }
 
-.appointmnet .info-items .info-item .icon-wrapper {
+.appointment .info-items .info-item .icon-wrapper {
   width: 60px;
   height: 60px;
   background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
@@ -4912,85 +4921,85 @@ section,
   flex-shrink: 0;
 }
 
-.appointmnet .info-items .info-item .icon-wrapper i {
+.appointment .info-items .info-item .icon-wrapper i {
   font-size: 1.5rem;
   color: var(--accent-color);
 }
 
-.appointmnet .info-items .info-item h5 {
+.appointment .info-items .info-item h5 {
   color: var(--heading-color);
   font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-.appointmnet .info-items .info-item p {
+.appointment .info-items .info-item p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
   font-size: 0.9rem;
   line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-  .appointmnet .section-title h2 {
+  .appointment .section-title h2 {
     font-size: 1.75rem;
   }
   
-  .appointmnet .appointment-info h3 {
+  .appointment .appointment-info h3 {
     font-size: 1.5rem;
   }
   
-  .appointmnet .info-items .info-item .icon-wrapper {
+  .appointment .info-items .info-item .icon-wrapper {
     width: 50px;
     height: 50px;
   }
   
-  .appointmnet .info-items .info-item .icon-wrapper i {
+  .appointment .info-items .info-item .icon-wrapper i {
     font-size: 1.25rem;
   }
   
-  .appointmnet .info-items .info-item h5 {
+  .appointment .info-items .info-item h5 {
     font-size: 1rem;
     margin-bottom: 0.25rem;
   }
   
-  .appointmnet .info-items .info-item p {
+  .appointment .info-items .info-item p {
     font-size: 0.85rem;
   }
 }
 
-.appointmnet .emergency-contact .emergency-card {
+.appointment .emergency-contact .emergency-card {
   background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
   border-left: 4px solid var(--accent-color);
   border-radius: 8px;
 }
 
-.appointmnet .emergency-contact .emergency-card h6 {
+.appointment .emergency-contact .emergency-card h6 {
   color: var(--heading-color);
   font-weight: 600;
 }
 
-.appointmnet .emergency-contact .emergency-card h6 i {
+.appointment .emergency-contact .emergency-card h6 i {
   color: var(--accent-color);
 }
 
-.appointmnet .emergency-contact .emergency-card p {
+.appointment .emergency-contact .emergency-card p {
   color: var(--default-color);
   font-size: 0.9rem;
 }
 
-.appointmnet .emergency-contact .emergency-card p strong {
+.appointment .emergency-contact .emergency-card p strong {
   color: var(--accent-color);
 }
 
-.appointmnet .appointment-form-wrapper {
+.appointment .appointment-form-wrapper {
   background-color: var(--surface-color);
   padding: 2rem;
   border-radius: 15px;
   box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
 }
 
-.appointmnet .appointment-form .form-control,
-.appointmnet .appointment-form .form-select {
+.appointment .appointment-form .form-control,
+.appointment .appointment-form .form-select {
   color: var(--default-color);
   background-color: var(--surface-color);
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
@@ -5000,31 +5009,31 @@ section,
   transition: all 0.3s ease;
 }
 
-.appointmnet .appointment-form .form-control:focus,
-.appointmnet .appointment-form .form-select:focus {
+.appointment .appointment-form .form-control:focus,
+.appointment .appointment-form .form-select:focus {
   border-color: var(--accent-color);
   box-shadow: 0 0 0 0.2rem color-mix(in srgb, var(--accent-color), transparent 85%);
 }
 
-.appointmnet .appointment-form .form-control::placeholder,
-.appointmnet .appointment-form .form-select::placeholder {
+.appointment .appointment-form .form-control::placeholder,
+.appointment .appointment-form .form-select::placeholder {
   color: color-mix(in srgb, var(--default-color), transparent 50%);
 }
 
-.appointmnet .appointment-form .form-select {
+.appointment .appointment-form .form-select {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-.appointmnet .appointment-form .form-select:focus {
+.appointment .appointment-form .form-select:focus {
   color: var(--default-color);
 }
 
-.appointmnet .appointment-form textarea.form-control {
+.appointment .appointment-form textarea.form-control {
   resize: vertical;
   min-height: 120px;
 }
 
-.appointmnet .appointment-form .btn-appointment {
+.appointment .appointment-form .btn-appointment {
   background-color: var(--accent-color);
   border: none;
   color: var(--contrast-color);
@@ -5035,20 +5044,20 @@ section,
   transition: all 0.3s ease;
 }
 
-.appointmnet .appointment-form .btn-appointment:hover {
+.appointment .appointment-form .btn-appointment:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 10%);
   transform: translateY(-2px);
 }
 
-.appointmnet .appointment-form .btn-appointment i {
+.appointment .appointment-form .btn-appointment i {
   font-size: 1.1rem;
 }
 
-.appointmnet .process-steps {
+.appointment .process-steps {
   margin-top: 4rem;
 }
 
-.appointmnet .process-steps .step-item {
+.appointment .process-steps .step-item {
   position: relative;
   padding: 1.8rem 1.2rem;
   text-align: center;
@@ -5063,14 +5072,14 @@ section,
   height: 100%;
 }
 
-.appointmnet .process-steps .step-item:hover {
+.appointment .process-steps .step-item:hover {
   transform: translateY(-10px);
   background: rgba(255, 255, 255, 0.6);
   box-shadow: 0 15px 45px 0 rgba(31, 38, 135, 0.15);
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-.appointmnet .process-steps .step-item .step-number {
+.appointment .process-steps .step-item .step-number {
   position: absolute;
   top: -20px;
   left: 50%;
@@ -5090,32 +5099,34 @@ section,
   border: 3px solid #fff;
 }
 
-.appointmnet .process-steps .step-item .step-icon {
+.appointment .process-steps .step-item .step-icon {
   margin: 1rem 0 1.5rem 0;
   transition: transform 0.3s ease;
 }
 
-.appointmnet .process-steps .step-item:hover .step-icon {
+.appointment .process-steps .step-item:hover .step-icon {
   transform: scale(1.1);
 }
 
-.appointmnet .process-steps .step-item .step-icon i {
+.appointment .process-steps .step-item .step-icon i {
   font-size: 2.8rem;
+  color: var(--accent-color); /* Fallback for browsers that don't support background-clip: text */
   background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), black 20%));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  opacity: 0.8;
+  display: inline-block; /* Essential for background-clip: text on some mobile browsers */
+  opacity: 0.9;
 }
 
-.appointmnet .process-steps .step-item h5 {
+.appointment .process-steps .step-item h5 {
   color: var(--heading-color);
   font-size: 1.15rem;
   font-weight: 700;
   margin-bottom: 0.8rem;
 }
 
-.appointmnet .process-steps .step-item p {
+.appointment .process-steps .step-item p {
   color: color-mix(in srgb, var(--default-color), transparent 15%);
   font-size: 0.95rem;
   line-height: 1.6;
@@ -5123,7 +5134,7 @@ section,
 }
 
 /* Connecting line adjusted for glassy cards */
-.appointmnet .process-steps .step-item::before {
+.appointment .process-steps .step-item::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -5137,26 +5148,26 @@ section,
 }
 
 @media (max-width: 991px) {
-  .appointmnet .process-steps .step-item::before {
+  .appointment .process-steps .step-item::before {
     display: none;
   }
 }
 
-.appointmnet .process-steps .step-item:last-child::before {
+.appointment .process-steps .step-item:last-child::before {
   display: none;
 }
 
 @media (max-width: 768px) {
-  .appointmnet .appointment-form-wrapper {
+  .appointment .appointment-form-wrapper {
     padding: 1.5rem;
     margin-top: 2rem;
   }
 
-  .appointmnet .process-steps {
+  .appointment .process-steps {
     margin-top: 3rem;
   }
 
-  .appointmnet .process-steps .step-item {
+  .appointment .process-steps .step-item {
     padding: 1.5rem 0.5rem;
   }
 }
@@ -6738,7 +6749,10 @@ a.btn-whatsapp-cta:focus {
   position: fixed;
   bottom: 25px;
   right: 25px;
-  z-index: 1000;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99999; /* Lower than top menu but above footer */
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -6817,14 +6831,16 @@ a.btn-whatsapp-cta:focus {
 
 @media (min-width: 0px) {
   .hero .hero-content .packages-ticker-wrapper {
-    width: min(1120px, calc(100vw - 120px));
+    width: min(1120px, calc(100vw - 30px)); /* More space on mobile */
     display: flex;
     align-items: stretch;
     margin-top: 32px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 16px;
+    border-radius: 50px; /* Use pill shape globally */
     overflow: hidden;
+    position: relative;
+    z-index: 10;
     border: 1px solid rgba(170, 220, 255, 0.42);
     background: rgba(18, 94, 152, 0.28);
     backdrop-filter: blur(8px) saturate(130%);
@@ -6965,6 +6981,9 @@ a.btn-whatsapp-cta:focus {
 
     .hero .hero-content .packages-ticker-swiper {
       height: 100%;
+      min-width: 0;
+      width: 0;
+      flex: 1;
     }
   }
 
@@ -6982,8 +7001,23 @@ a.btn-whatsapp-cta:focus {
     }
 
     .hero .hero-content .package-ticker-item {
+      font-size: 0.75rem;
+      padding: 0 0.4rem;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .hero .hero-content .packages-ticker-wrapper .packages-ticker-call .item-icon {
+      display: none;
+    }
+
+    .hero .hero-content .packages-ticker-wrapper .packages-ticker-call .item-copy strong {
       font-size: 0.8rem;
-      padding: 0 0.6rem;
+    }
+
+    .hero .hero-content .package-ticker-item {
+      font-size: 0.7rem;
+      padding: 0 0.3rem;
     }
   }
 }
